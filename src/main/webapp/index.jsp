@@ -1,3 +1,6 @@
+
+<%@ page import="com.db.DBConnect" %>
+<%@ page import="java.sql.Connection" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -6,10 +9,26 @@
 <meta charset="UTF-8">
 <title>Index Page</title>
 <%@include file="component/AllCSS.jsp" %>
+
+<style type="text/css">
+
+.paint-card{
+box-shadow:0 0 10px 0 rgba(0,0,0,0.3);
+}
+
+</style>
 </head>
 
 <body>
 <%@include file="component/navbar.jsp" %>
+
+<% Connection conn= DBConnect.getConn();
+out.print(conn);
+
+%>
+
+
+
 
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
@@ -52,17 +71,109 @@
 </div>
 
 <div class="container p-3">
-
-  <div class="row row-cols-2">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
+<p class="text-center fs-2">Key Features of our Hospital</p>
+  <div class="row">
+  <div  class ="col-md-8 p-5">
+  <div class="row">
+  <div class ="col-md-6">
+  <div class="card paint-card">
+  <div class="card-body">
+  <p class="fs-5">100% safety</p>
+  <p>hgweiygbhjbfdysygyugweihb hjgbefwyudsvyu nbjhdgyufda hjvh
+  gvfujvfds nkbdhvyds</p>
   </div>
+  </div>
+  </div>
+  <div class ="col-md-6">
+  <div class="card paint-card">
+  <div class="card-body">
+  <p class="fs-5">100% safety</p>
+  <p>hgweiygbhjbfdysygyugweihb hjgbefwyudsvyu nbjhdgyufda hjvh
+  gvfujvfds nkbdhvyds</p>
+  </div>
+  </div>
+  </div>
+  <div class ="col-md-6 mt-2">
+  <div class="card paint-card">
+  <div class="card-body">
+  <p class="fs-5">100% safety</p>
+  <p>hgweiygbhjbfdysygyugweihb hjgbefwyudsvyu nbjhdgyufda hjvh
+  gvfujvfds nkbdhvyds</p>
+  </div>
+  </div>
+  </div>
+  <div class ="col-md-6 mt-2">
+  <div class="card paint-card">
+  <div class="card-body">
+  <p class="fs-5">100% safety</p>
+  <p>hgweiygbhjbfdysygyugweihb hjgbefwyudsvyu nbjhdgyufda hjvh
+  gvfujvfds nkbdhvyds</p>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+<div class="col-md-4">
+<img alt="doctor" src="img/doc.jpeg">
+</div>
+</div>
+</div>
+
+
+<hr>
+<div class="container p-2">
+<p class="text-center fs-2">Our Team</p>
+
+<div class="row">
+<div class="col-md-3">
+<div class="card paint-card">
+<div class="card paint text-center">
+<img src="img/doc2.avif" width="250px" height="300px">
+<p class="fw-bold fs-5">havsfvsbnvhjsd hgjas</p>
+<p class="fs-7">(CEO & Chairman)</p>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card paint-card">
+<div class="card paint text-center">
+<img src="img/doc2.avif" width="250px" height="300px">
+<p class="fw-bold fs-5">havsfvsbnvhjsd hgjas</p>
+<p class="fs-7">(CEO & Chairman)</p>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card paint-card">
+<div class="card paint text-center">
+<img src="img/doc2.avif" width="250px" height="300px">
+<p class="fw-bold fs-5">havsfvsbnvhjsd hgjas</p>
+<p class="fs-7">(CEO & Chairman)</p>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card paint-card">
+<div class="card paint text-center">
+<img src="img/doc2.avif" width="250px" height="300px">
+<p class="fw-bold fs-5">havsfvsbnvhjsd hgjas</p>
+<p class="fs-7">(CEO & Chairman)</p>
+</div>
+</div>
+</div>
 </div>
 
 
 
+</div>
+
+<%@include file="component/footer.jsp"%>
 
 </body>
 </html>
